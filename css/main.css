@@ -28,9 +28,10 @@
 }
 
 .home .home-support__img {
-  -ms-flex-preferred-size: 20vw;
-      flex-basis: 20vw;
+  -ms-flex-preferred-size: 20px;
+      flex-basis: 20px;
   height: 20vh;
+  margin-right: .8rem;
 }
 
 .home .home-support h1 {
@@ -55,6 +56,7 @@ body {
   background: #222;
   color: #fff;
   height: 100vh;
+  width: 100vw;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
 }
@@ -73,6 +75,7 @@ header {
 
 main {
   height: 100%;
+  width: 100%;
 }
 
 main .social-icons {
@@ -82,8 +85,7 @@ main .social-icons {
 }
 
 main .social-icons a {
-  padding: .4rem 0;
-  padding-left: .1rem !important;
+  padding: .4rem;
   color: red;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
