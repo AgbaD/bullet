@@ -1,5 +1,5 @@
 .home {
-    padding-top: 20vh;
+    padding-top: 30vh;
     overflow: hidden;
     align-items: left;
     text-align: center;
@@ -11,20 +11,22 @@
     .home-support {
         display: flex;
         justify-content: center;
+        margin-bottom: 1rem;
 
         &__img{
-            flex-basis: 20px;
+            flex-basis: auto;
             height: 20vh;
-            margin-right: .8rem;
+            margin-right: .5rem;
+            border-radius: 10px;
         }
 
         h1{
             align-self: center;
             font-weight: 700;
-            font-size: 2.6rem;
+            font-size: 1.8rem;
             line-height: 6vh;
             padding: 7vh 7px;
-            border-radius: 6px;
+            border-radius: 10px;
             color: $secondary-color;
             background: 
             linear-gradient(
@@ -35,6 +37,33 @@
 
         &__white{
             color: $primary-color
+        }
+    }
+
+    .home-welcome {
+        display: flex;
+        justify-content: center;
+
+        &__img{
+            flex-basis: auto;
+            height: 20vh;
+            margin-right: .5rem;
+            border-radius: 10px;
+        }
+
+        p {
+            background: 
+            linear-gradient(
+                rgba(0,0,0,0.7),
+                rgba(0,0,0,0.7)
+            );
+            padding: 1.2rem .7rem;
+            font-size: 1rem;
+            line-height: 1.3rem;
+            border-radius: 10px;
+            width: 190px;
+            height: 20vh;
+            align-self: center;
         }
     }
 }
