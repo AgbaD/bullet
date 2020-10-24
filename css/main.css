@@ -1,0 +1,379 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.home {
+  padding-top: 30vh;
+  overflow: hidden;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  text-align: center;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.7))), url(../img/2.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../img/2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.home .game-name {
+  display: none;
+}
+
+.home .game-name h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 10vh;
+  color: #d88810;
+}
+
+.home .home-support {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.home .home-support__img {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  height: 20vh;
+  margin-right: .5rem;
+  border: .5px solid #d88810;
+  border-radius: 10px;
+}
+
+.home .home-support h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 6vh;
+  padding: 7vh 7px;
+  border: .5px solid #d88810;
+  border-radius: 10px;
+  color: red;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(rgba(0, 0, 0, 0.4)), color-stop(rgba(0, 0, 0, 0.7)), to(black));
+  background: linear-gradient(black, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7), black);
+}
+
+.home .home-support__white {
+  color: #fff;
+}
+
+.home .home-welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home .home-welcome__img {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  height: 20vh;
+  margin-right: .5rem;
+  border: .5px solid #d88810;
+  border-radius: 10px;
+}
+
+.home .home-welcome p {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7)));
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  padding: 1.2rem .7rem;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  border: .5px solid #d88810;
+  border-radius: 10px;
+  width: 160px;
+  height: 20vh;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: 1rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  width: 20px;
+  height: 3px;
+  background: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger.open {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+  background: transparent;
+}
+
+.menu-btn__burger.open::before {
+  -webkit-transform: rotate(45deg) translate(5px, 8px);
+          transform: rotate(45deg) translate(5px, 8px);
+  background: red;
+}
+
+.menu-btn__burger.open::after {
+  -webkit-transform: rotate(-45deg) translate(3px, -7px);
+          transform: rotate(-45deg) translate(3px, -7px);
+  background: red;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.98;
+  visibility: hidden;
+}
+
+.nav.open {
+  visibility: visible;
+}
+
+.nav .menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 30vh;
+  overflow: hidden;
+  background: #222;
+  list-style-type: none;
+  padding-left: 1rem;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav .menu-nav.open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.nav .menu-nav__item {
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav .menu-nav__item.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.nav .menu-nav__item.active > a {
+  color: red;
+}
+
+.nav .menu-nav__link {
+  display: inline-block;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  padding: .5rem 0;
+  font-weight: 300;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav .menu-nav__link:hover {
+  color: red;
+}
+
+.menu-nav__item:nth-child(1) {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.menu-nav__item:nth-child(2) {
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+
+.menu-nav__item:nth-child(3) {
+  -webkit-transition-delay: 0.45s;
+          transition-delay: 0.45s;
+}
+
+.menu-nav__item:nth-child(4) {
+  -webkit-transition-delay: 0.55s;
+          transition-delay: 0.55s;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    visibility: hidden;
+  }
+  .nav {
+    visibility: visible;
+  }
+  .nav .menu-nav {
+    display: block;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    height: 100%;
+    background: transparent;
+    text-align: right;
+  }
+  .nav .menu-nav__item {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+  .nav .menu-nav__link {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  .home-support h1 {
+    font-size: 3.3rem !important;
+    margin-right: 1rem !important;
+  }
+  .home-welcome {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  .home-welcome p {
+    width: 277px !important;
+    font-size: 1.5rem !important;
+    line-height: 1.6rem !important;
+    padding-top: .7rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .home-support {
+    -webkit-box-pack: right !important;
+        -ms-flex-pack: right !important;
+            justify-content: right !important;
+  }
+  .home-welcome {
+    -webkit-box-pack: right !important;
+        -ms-flex-pack: right !important;
+            justify-content: right !important;
+    -webkit-transform: translateX(-17px);
+            transform: translateX(-17px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .game-name {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    position: absolute;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    margin: 6.3rem;
+  }
+}
+
+body {
+  background: #222;
+  color: #fff;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Antic Slab', serif;
+  line-height: 1;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+main .social-icons {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+main .social-icons a {
+  padding: .4rem;
+  color: red;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+main .social-icons a:hover {
+  color: #cacfca;
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */
