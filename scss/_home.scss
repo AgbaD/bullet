@@ -1,3 +1,10 @@
+@mixin image_edit {
+    flex-basis: auto;
+    height: 20vh;
+    margin-right: .5rem;
+    border-radius: 10px;
+}
+
 .home {
     padding-top: 30vh;
     overflow: hidden;
@@ -14,10 +21,7 @@
         margin-bottom: 1rem;
 
         &__img{
-            flex-basis: auto;
-            height: 20vh;
-            margin-right: .5rem;
-            border-radius: 10px;
+            @include image_edit;
         }
 
         h1{
@@ -45,10 +49,7 @@
         justify-content: center;
 
         &__img{
-            flex-basis: auto;
-            height: 20vh;
-            margin-right: .5rem;
-            border-radius: 10px;
+            @include image_edit;
         }
 
         p {
