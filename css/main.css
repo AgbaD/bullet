@@ -28,10 +28,9 @@
 }
 
 .home .home-support__img {
-  -ms-flex-preferred-size: 10px;
-      flex-basis: 10px;
+  -ms-flex-preferred-size: 20vw;
+      flex-basis: 20vw;
   height: 20vh;
-  margin-right: .8rem;
 }
 
 .home .home-support h1 {
@@ -74,7 +73,6 @@ header {
 
 main {
   height: 100%;
-  width: 100%;
 }
 
 main .social-icons {
