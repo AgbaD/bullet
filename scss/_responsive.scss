@@ -1,0 +1,63 @@
+@include media-md {
+    .menu-btn {
+        visibility: hidden;
+    }
+
+    .nav {
+        visibility: visible;
+
+        .menu-nav {
+            display: block;
+            transform: translateY(0);
+            height: 100%;
+            background: transparent;
+            text-align: right;
+
+            &__item {
+                display: inline;
+                padding-right: 1.5rem;
+            }
+
+            &__link {
+                font-size: 1.2rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    .home-support h1 {
+            font-size: 3.3rem !important;
+            margin-right: 1rem !important;
+    }
+
+    .home-welcome {
+        transform: translateX(-10px);
+
+        p {
+            width: 277px !important;
+            font-size: 1.5rem !important;
+            line-height: 1.6rem !important;
+            padding-top: .7rem !important;
+        }
+    }
+}
+
+@include media-lg {
+    .home-support {
+        justify-content: right !important;
+    }
+
+    .home-welcome {
+        justify-content: right !important;
+        transform: translateX(-17px);
+    }
+}
+
+@include media-xl {
+    .game-name {
+        display: flex !important;
+        position: absolute;
+        justify-content: left;
+        margin: 6.3rem;
+    }
+}
