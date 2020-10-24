@@ -1,0 +1,40 @@
+.home {
+    padding-top: 20vh;
+    overflow: hidden;
+    align-items: left;
+    text-align: center;
+    height: 100%;
+    background: url(../img/2.jpg);
+    background-size: cover;
+    background-position: center;
+
+    .home-support {
+        display: flex;
+        justify-content: center;
+
+        &__img{
+            flex-basis: 10px;
+            height: 20vh;
+            margin-right: .8rem;
+        }
+
+        h1{
+            align-self: center;
+            font-weight: 700;
+            font-size: 2.6rem;
+            line-height: 6vh;
+            padding: 7vh 7px;
+            border-radius: 6px;
+            color: $secondary-color;
+            background: 
+            linear-gradient(
+                rgba(0,0,0,1), rgba(0,0,0,0.4),
+                rgba(0,0,0,0.7),rgba(0,0,0,1)
+            );
+        }
+
+        &__white{
+            color: $primary-color
+        }
+    }
+}

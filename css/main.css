@@ -1,1 +1,107 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.home {
+  padding-top: 20vh;
+  overflow: hidden;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  text-align: center;
+  height: 100%;
+  background: url(../img/2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.home .home-support {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home .home-support__img {
+  -ms-flex-preferred-size: 10px;
+      flex-basis: 10px;
+  height: 20vh;
+  margin-right: .8rem;
+}
+
+.home .home-support h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 6vh;
+  padding: 7vh 7px;
+  border-radius: 6px;
+  color: red;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(rgba(0, 0, 0, 0.4)), color-stop(rgba(0, 0, 0, 0.7)), to(black));
+  background: linear-gradient(black, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7), black);
+}
+
+.home .home-support__white {
+  color: #fff;
+}
+
+body {
+  background: #222;
+  color: #fff;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+}
+
+a {
+  color: set-text-color(#fff);
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+main .social-icons {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+main .social-icons a {
+  padding: .4rem 0;
+  padding-left: .1rem !important;
+  color: red;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+main .social-icons a:hover {
+  color: #cacfca;
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */
